@@ -1,0 +1,38 @@
+import React from 'react'
+import Navbar from './Navbar'
+import DoctorCard from './DoctorCard'
+import AddDoctor from './AddDoctor'
+import Home from './Home'
+import "./Home.css"
+
+
+export default function App() {
+  return (
+    <div>
+      <Navbar/>
+      <Home/>
+      {/* <AddDoctor /> */}
+      {/* <DoctorCard 
+      name=" Rahamtulla"
+      age=" 23" 
+      gender=" male"
+      salary=" 45000"
+      specialization=" Team Lead"
+      />
+      <DoctorCard
+      name=" Anand"
+      age=" 20"
+      gender=" male"
+      salary=" 18000"
+      specialization=" Developer"
+      />
+      <DoctorCard
+      name=" Mounika"
+      age=" 22"
+      gender=" Female"
+      salary=" 35000"
+      specialization=" Tester"
+      /> */}
+    </div>
+  )
+}
