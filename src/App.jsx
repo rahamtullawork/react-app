@@ -4,13 +4,20 @@ import DoctorCard from './DoctorCard'
 import AddDoctor from './AddDoctor'
 import Home from './Home'
 import "./Home.css"
+import { Routes,Route } from 'react-router-dom'
 
 
 export default function App() {
   return (
     <div>
       <Navbar/>
-      <Home/>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/add-doctor' element={<AddDoctor/>}/>
+
+      </Routes>
+
+      {/* <Home/> */}
       {/* <AddDoctor /> */}
       {/* <DoctorCard 
       name=" Rahamtulla"

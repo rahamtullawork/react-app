@@ -25,7 +25,7 @@ export default function Home() {
       <div className="search">
         <input
           type="text"
-          placeholder="Enter a doctor anem"
+          placeholder="Enter a doctor name"
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
