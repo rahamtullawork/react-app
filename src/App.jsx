@@ -5,6 +5,7 @@ import AddDoctor from './AddDoctor'
 import Home from './Home'
 import "./Home.css"
 import { Routes,Route } from 'react-router-dom'
+import Patients from './Patients'
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/add-doctor' element={<AddDoctor/>}/>
+        <Route path='/patients' element={<Patients/>}/>
 
       </Routes>
 
