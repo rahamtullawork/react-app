@@ -6,6 +6,7 @@ import Home from './Home'
 import "./Home.css"
 import { Routes,Route } from 'react-router-dom'
 import Patients from './Patients'
+import Login from './Login'
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/login' element={<Login/>}/>
         <Route path='/add-doctor' element={<AddDoctor/>}/>
         <Route path='/patients' element={<Patients/>}/>
 

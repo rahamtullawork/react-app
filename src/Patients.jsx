@@ -22,36 +22,26 @@ export default function Patients() {
     })
 
     return (
-        <div>
-            <div className="search">
-                <input type="text"
-                    placeholder="Enter patient name"
-                    onChange={(e) => setSearchTerm(e.target.value)} />
+        <div className="container-fluid">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 m-2">
+                {
+                    patients.map((i) => (
+                        <div className="col" key={i.id}>
+                            <div className="card">
+                                <div className="card-body">
+                                    <p className="card-text">Patient Name: {i.name}</p>
+                                    <p className="card-text">Patient Age: {i.age}</p>
+                                    <p className="card-text">Patient Gender: {i.gender}</p>
+                                    <p className="card-text">Patient Disease: {i.disease}</p>
+                                    <p className="card-text">Alloted Doctor: {i.doctor.name}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    ))
+                }
+
             </div>
-
-            {
-                filteredPatient.length === 0 ? (
-                    <>No Patient Found.....</>
-                ) : (
-                    <div className="card-container">
-                        {
-                            filteredPatient.map((i) => (
-                                <PatientsCard
-                                    key={i.id}
-                                    name={i.name}
-                                    weight={i.weight}
-                                    gender={i.gender}
-                                    age={i.age}
-                                    email={i.email}
-                                    disease={i.disease}
-                                />
-                            ))
-                        
-                    }
-
-                    </div>
-                )
-            }
 
         </div>
     )
